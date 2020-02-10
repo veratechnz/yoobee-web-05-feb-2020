@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact Us Page</title>
+	<!-- Google Fonts Tag -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700&display=swap" rel="stylesheet">
+	<!-- Font Awesome css -->
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<!-- Custom css -->
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="contact-page-body">
+	
+	<!-- NAVIGATION STARTS HERE -->
+	<ul class="navigation">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="afghan-cookies.html">Afghan</a></li>
+		<li><a href="brownie-cookies.html">Brownies</a></li>
+		<li><a href="choc-chip-cookies.html">Chocolate Chip</a></li>
+		<li><a href="contact.html" class="active">Contact</a></li>
+	</ul>
+	<!-- NAVIGATION ENDS HERE -->
+
+	<div class="form-holder">
+		<h1>Contact Us Form</h1>
+
+		<div class="social-links">
+			<!-- Email Link -->
+			<div class="email-link">
+				<a href="mailto:contact@cookies.co.nz">
+					<!-- The "fa fa-envelope" classes are needed for font awesome icons see: https://fontawesome.com/v4.7.0/icon/envelope -->
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+					contact@cookies.co.nz
+				</a>
+			</div>
+			<!-- Email Link ENDS -->
+
+			<!-- Phone Link -->
+			<div class="phone-link">
+				<a href="tel:0800-555-555">
+					<i class="fa fa-phone-square" aria-hidden="true"></i>
+				0800 555 555
+				</a>	
+			</div>
+			<!-- Phone Link ENDS -->
+
+			<div class="instagram-link">
+				<a href="https://www.instagram.com">
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+					Check out our instagram
+				</a>
+			</div>
+		</div> <!-- Social Links ENDS -->
+
+
+
+		<!-- Form Begins -->
+		<form action="">
+			<!-- Get the users name -->
+			<label for="firstName">1. First name:</label>
+			<br>
+			<input type="text" name="firstname" value="" placeholder="John" id="firstName">
+			<br>
+
+			<label for="lastName">2. Last name:</label>
+			<br>
+			<input type="text" name="lastname" value="" placeholder="Smith" id="lastName">
+			<br><br>
+
+			<label for="">3. Please select a type of cookie:</label><br>
+			<!-- Get the user to select a cookie -->
+			<input type="radio" name="cookietype" value="chocchip" checked> Chocolate Chip<br>
+			<input type="radio" name="cookietype" value="afghan"> Afghan<br>
+			<input type="radio" name="cookietype" value="brownie"> Brownie
+			<br><br>
+
+			<!-- Get the required quantity of cookies from the user -->
+			<label for="numberOfCookies">4. Number of cookies:</label><br>
+			<input type="number" name="numberofcookies" id="numberOfCookies"><br><br>
+
+			<!-- Get the users address -->
+			<label for="address">5. Your address:</label><br>
+			<input type="address" id="address"><br>
+
+			<!-- Get the user to send a message -->
+			<label for="myMessage">6. Comments or message:</label><br><br>
+			<textarea name="message" rows="10" cols="30" id="myMessage">...</textarea><br>
+
+			<!-- The submit button -->
+			<input type="submit" value="Submit" class="submit-button">
+		</form>
+		<!-- Form ENDS -->
+
+
+	</div>
+	<!-- Form Holder Ends -->
+	
+</body>
+</html>

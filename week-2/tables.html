@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		table {
+			margin: 40px;
+			font-family: arial, sans-serif;
+			border: 1px solid #000;
+			padding: 6px;
+			min-width: 900px;
+		}
+
+		th {
+			padding-bottom: 7px;
+		}
+
+		td, tr {
+			border: 1px solid #ddd;
+			text-align: left;
+			padding: 8px;
+		}
+		
+/*		This is a css pseudo selector called nth child. 
+		It will do combinations of css targetting - every even item
+		2nd 4th 6th parapgraph or table row*/
+		tr:nth-child(even) {
+		  background-color: grey;
+		} 
+
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Country</th>
+			<th>World Cup Victories</th>
+			<th>Uniform</th>
+		</tr>
+		<tr>
+			<td>New Zealand</td>
+			<td>2</td>
+			<td>Black</td>
+		</tr>
+		<tr>
+			<td>Japan</td>
+			<td>0</td>
+			<td>Red and Black Stripes</td>
+		</tr>
+		<tr>
+			<td>Argentina</td>
+			<td>0</td>
+			<td>Light Blue and White Stripes</td>
+		</tr>
+		<tr>
+			<td>Australia</td>
+			<td>1</td>
+			<td>Gold and Green</td>
+		</tr>
+	</table>
+</body>
+</html>

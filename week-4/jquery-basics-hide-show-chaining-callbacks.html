@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<style>
+		/* CSS Here */
+		.box {
+			width: 300px;
+			height: 300px;
+			border-radius: 6px;
+			display: inline-block;
+			margin: 15px;
+		}
+
+		.btn {
+			background-color: grey;
+			margin-right: 45px;
+		}
+
+		.blue {
+			background-color: blue;
+		}
+
+		.green {
+			background-color: green;
+		}
+
+		.yellow {
+			background-color: yellow;
+		}
+
+		.red {
+			background-color: red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="contain">
+		<div class="box blue" id="blueBox"></div>
+		<div class="box green" id="greenBox"></div>
+		<div class="box yellow" id="yellowBox"></div>
+		<div class="box red" id="redBox"></div>
+	</div>
+
+	<div class="contain-buttons">
+		<button class="btn" id="buttonA">Button A</button>
+		<button class="btn" id="buttonB">Button B</button>
+		<button class="btn" id="buttonC">Button C</button>
+		<button class="btn" id="buttonD">Button D</button>
+	</div>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+		// Custom js Here
+
+		// This is a doc ready function it allows you to wait till html loads 
+		// before running your javascript code
+		$(document).ready(function (){
+		// All of this code is now within the function on line 65 above
+			// Here we are targetting the blue box via it's css class
+			// we then use the hide method below, to hide it across a 3.5 second time animation
+			$('.blue').hide(3500);
+
+			// Next we do the same thing with the red box. This time we select the box with the #id(#redBox)
+			// rather than using it's .class('.red')
+			$('#redBox').hide(3000);
+			$('.red').show(3000);
+
+			// Here we use a coding pattern called chaining. With chaining you can link some jQuery methods
+			// together. We are using chaining to hide and show the green and yellow divs in order. 
+			$('.green').hide(4000).show(4000).hide(1000).show(1000).hide(500).show(500).hide(250).show(250);
+
+			// *** CALLBACK FUNCTIONS ***:
+			// This is a coding technique known as a 'callback function'. It is a useful coding pattern
+			// in that it allows you to make something happen ONLY AFTER the current method is finished. 
+			// A callback function pattern used with the 'hide()' method:
+			// First the yellow box hides.........
+			$('#yellowBox').hide(18000, function(){
+				// Now we are inside the callback function and the remaining code with run
+				alert('The yellow box is now completely hidden. This line below will now hide the rest of the boxes')
+				// Hide all of the remaining boxes on the page
+				$('.box').hide(6000, function);
+			})
+
+		});
+	</script>
+</body>
+</html>

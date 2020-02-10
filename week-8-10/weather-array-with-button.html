@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js functions and objects</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<style>
+		/* CSS Here */
+		body {
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+
+		.weather-icon {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="pageHeading">Good Afternoon NZ</h1>
+	<p id="statement">The weather today is <span id="weather">sunny</span>.</p>
+
+	<hr>
+
+	<button type="button" id="mon">Monday ?</button>
+	<button type="button" id="tue">Tuesday ?</button>
+	<button type="button" id="wed">Wednesday ?</button>
+	<button type="button" id="thur">Thursday ?</button>
+	<button type="button" id="fri">Friday ?</button>
+	<button type="button" id="sat">Saturday ?</button>
+	<button type="button" id="sun">Sunday ?</button>
+	<button type="button" id="tellUs">Tell Us The Weather </button>
+
+	<hr>
+
+	<img src="img/cloudy.png" alt="" width="100" id="cloudy" class="weather-icon">
+	<img src="img/lightning.png" alt="" width="100" id="lightning" class="weather-icon">
+	<img src="img/rainy.png" alt="" width="100" id="rainy" class="weather-icon">
+	<img src="img/windy.png" alt="" width="100" id="windy" class="weather-icon">
+	<img src="img/sunny.png" alt="" width="100" id="sunny" class="weather-icon">
+	<img src="img/thunder.png" alt="" width="100" id="thunder" class="weather-icon">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+		// Custom js Here
+
+		// A weather information/data object
+		// Here we use a variable name weatherForecast 
+		// to represent the object data. 
+		var weatherForecast = {
+			// These days of the week are called properties
+			// The weather types next to them are values
+			// All of the values are called strings  ' '
+			// A string is a data type.
+			mon: 'sunny',
+			tue: 'cloudy',
+			wed: 'rainy',
+			thur: 'thunder',
+			fri: 'windy',
+			sat: 'lightning',
+			sun: ' some showers with fine patches'
+		}
+
+		// var weatherArray = ['sunny', 'cloudy', 'rainy', 'thunder', 'windy', 'fine', ' some showers with fine patches'];
+
+		// 1. This is a function which grabs html elements
+		// function grabElements () {
+		// 	// These are variables which grab the elements from the DOM
+		// 	// and stores them in memory
+		// 	var heading = document.getElementById('pageHeading');
+		// 	var paragraph = document.getElementById('statement');
+		// 	var span = document.getElementById('weather');
+
+		// 	// Here we are using the span variable and accessing the 
+		// 	// innerText property of the html element. 
+		// 	// We then use the weatherForecast object to update 
+		// 	// the innerText property. The final update is the 
+		// 	// thur/Thursday property with a string value of 'thunder'.
+		// 	// This means the DOM or html will now have the word thunder in
+		// 	// it
+		// 	span.innerText = weatherForecast.thur;
+		// }
+
+		//2. Here we invoke / call the function
+		// grabElements();
+
+
+		// --------------------------------------------------------------
+
+		// function workWithWeatherArray () {
+		// 	var weatherType = weatherArray[5];
+		// 	var span = document.getElementById('weather');
+		// 	span.innerText = weatherType + ' but in the evening it may be ' + weatherForecast.wed;
+		// }
+
+		// window.onclick = function () {
+		// 	workWithWeatherArray();
+		// }
+
+		function setUpButtonEvents () {
+
+			var mon = document.getElementById('mon');
+			var tue = document.getElementById('tue');
+			var wed = document.getElementById('wed');
+			var thur = document.getElementById('thur');
+			var fri = document.getElementById('fri');
+			var sat = document.getElementById('sat');
+			var sun = document.getElementById('sun');
+			var tellUs = document.getElementById('tellUs');
+			var span = document.getElementById('weather');
+
+			mon.onclick = function () {
+				console.log('a');
+				span.innerText = weatherForecast.mon;
+			}
+
+			tue.onclick = function () {
+				console.log('b');
+				span.innerText = weatherForecast.tue;
+				console.log(weatherForecast.tue)
+			}
+
+			wed.onclick = function () {
+				span.innerText = weatherForecast.wed;
+			}
+
+			thur.onclick = function () {
+				span.innerText = weatherForecast.thur;
+			}
+
+			fri.onclick = function () {
+				span.innerText = weatherForecast.fri;
+			}
+
+			sat.onclick = function () {
+				span.innerText = weatherForecast.sat;
+			}
+
+			sun.onclick = function () {
+				span.innerText = weatherForecast.sun;
+			}
+
+			tellUs.onclick = function () {
+				var askForWeather = prompt("What is the weather like today", "Cloudy....?");
+				span.innerText = askForWeather;
+			}
+
+		} // setUpButtonEvents ENDS
+
+		setUpButtonEvents();
+
+
+		function displayCorrectImages () {
+
+		}
+
+
+		// 1. Restructure
+
+		// 2. Pseudocode / Plan
+
+		// 3. Hide/Show images
+
+
+
+	</script>
+</body>
+</html>

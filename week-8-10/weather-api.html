@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<style>
+		/* CSS Here */
+	</style>
+</head>
+<body>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<h1>The temperature today in Wellington is <span id="temp"></span> degrees celsius.</h1>
+
+	<script>
+	
+		// Custom js Here
+		// Basic API call with console.log
+		// Ajax is a way of reaching out to the internet to use data or a pre-made computer program
+		// This data or pre-made program (in this case a weather api) is called an API.
+		// An API is what makes web development REALLY interesting. There are thousands and many of 
+		// them are free. API = Application Programming Interface. 
+			$.ajax({
+				 // The string url to access the API, notice the long list of digits at the end is an individual password.  
+         url: 'https://api.openweathermap.org/data/2.5/weather?q=Wellington&units=metric&APPID=66ce6f7e945db003aaa343f0bc010dc8',
+         // This is the type of request. We are getting information from the api 
+         type: "GET",
+         dataType: "jsonp",
+         success: function(data){
+         		 // Call the tellWeather function
+             tellWeather(data)
+         }
+			});
+
+			// This function takes an argument called 'data' you can see it on the lines above in the success function. 
+			function tellWeather (data) {
+				// Grab the temp span then update it with the data from the weather api
+				$('#temp').text(data.main.temp);
+			} // tellWeather function Ends
+
+	</script>
+</body>
+</html>

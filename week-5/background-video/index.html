@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<!-- *** Note the original plugin for this video has some broken js 
+		use the js files within this folder if you want the plugin to work-->
+	<!-- 1. Add this css to make the background video plugin work -->
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		/* CSS Here */
+		html, body {
+			height: 100%;
+		}
+		h1 {
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #fff;
+			font-weight: 300;
+			width: 40%;
+			margin: 0 auto;
+			background: rgba(0, 0, 0, 0.5);
+			padding: 2em;
+			font-size: 58px;
+			margin-top: 2em;
+		}
+		.bg-video {
+			height: 100%;
+		}
+
+		.mobile-polaroid {
+			display: none;
+		}
+	
+	</style>
+</head>
+<body>
+	<!--2. Add the jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--3. ADD youtube video API -->
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<!--4. ADD Jquery Video Background -->
+	<script src="js/jquery.youtubebackground.js"></script>
+	<script>
+	// 5. Custom code for the background video
+	$(document).ready(function(){
+		// Custom js Here
+		$('#background-video').YTPlayer({
+		  fitToBackground: true,// use as a background video
+		  // Use this id to change the video content
+		  videoId:'ILqwaOR70mU'
+		});
+	});
+	</script>
+</body>
+</html>

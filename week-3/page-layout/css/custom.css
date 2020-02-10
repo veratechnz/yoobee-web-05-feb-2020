@@ -1,0 +1,130 @@
+/* The css below includes a css reset */
+html, 
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-size: 16px;
+	position: relative;
+	min-height: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* The 'body' css below is for creating the correct space for the sticky footer */
+/* This will allow the page to scroll far enough to show all the content under */
+/* the sticky footer */
+body {
+    margin-bottom: 145px; /* bottom = footer height */
+}
+
+/* The css for the fixed footer that uses the 'position: fixed;' property and value*/
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0px;
+	width: 100%;
+	background-color: red;
+	color: white;
+	text-align: center;
+	height: 100px;
+	padding-top: 30px;
+}
+
+/* New Navigation CSS Starts here - Copied and updated from the cookies web site */
+.navigation {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: red;
+	opacity: 0.88;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 2.5em;
+}
+
+.navigation li {
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	float: left;
+	cursor: pointer;
+}
+
+.navigation a {
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	display: block;
+}
+
+li:hover {
+	background-color: grey;
+}
+
+.navigation .active {
+	color: yellow;
+}
+
+/* Layout css */
+
+/* This creates a parent div for the column divs below */
+.parent {
+	 border: 1px solid #888;
+	 overflow: auto;  /*This css property prevents the parent collapsing*/
+	 margin-bottom: 30px;
+	 padding: 10px;
+}
+
+.column {
+	background-color: red;
+	float: left;
+	width: 32.7%;
+	margin: 0.3%;
+	height: 220px;
+}
+
+.column-b {
+	width: 49.4%;
+	background-color: red;
+	float: left;
+	margin: 0.3%;
+	height: 220px;
+}
+
+.red-outline {
+	border: 3px solid red;
+	padding: 5px;
+	background-color: #efefef;
+	color: #222;
+	margin-right: 12px;
+}
+
+.blue-outline {
+	border: 3px solid blue;
+	padding: 5px;
+	background-color: #efefef;
+	color: #222;
+	margin-right: 2px;
+}
+
+.inline-block-a {
+	display: inline-block;
+	width: 100px;
+	background-color: pink;
+	text-align: center;
+	margin: 15px;
+}
+
+.inline-block-b {
+	display: inline-block;
+	height: 100px;
+	background-color: purple;
+	text-align: center;
+	color: white;
+	margin: 15px;
+}

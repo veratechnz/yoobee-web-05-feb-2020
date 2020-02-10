@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js functions and objects</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<style>
+		/* CSS Here */
+		body {
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+
+		.weather-icon {
+			display: none;
+			text-align: center;
+			width: 400px;
+		}
+
+		button {
+			padding: 1.2em;
+			margin-right: 3em;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="pageHeading">Good Afternoon NZ</h1>
+	<p id="statement">Weather Forecast: <span id="weather"></span>.</p>
+
+	<hr>
+
+	<button type="button" id="mon">Monday</button>
+	<button type="button" id="tue">Tuesday</button>
+	<button type="button" id="wed">Wednesday</button>
+	<button type="button" id="thur">Thursday</button>
+	<button type="button" id="fri">Friday</button>
+	<button type="button" id="sat">Saturday</button>
+	<button type="button" id="sun">Sunday</button>
+	<!-- <button type="button" id="tellUs">Tell Us The Weather </button> -->
+
+	<hr>
+
+	<img src="img/cloudy.png" alt="" width="100" id="cloudy" class="weather-icon">
+	<img src="img/lightning.png" alt="" width="100" id="lightning" class="weather-icon">
+	<img src="img/rainy.png" alt="" width="100" id="rainy" class="weather-icon">
+	<img src="img/windy.png" alt="" width="100" id="windy" class="weather-icon">
+	<img src="img/sunny.png" alt="" width="100" id="sunny" class="weather-icon">
+	<img src="img/thunder.png" alt="" width="100" id="thunder" class="weather-icon">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+		// Custom js Here
+
+		// A weather information/data object
+		// Here we use a variable name weatherForecast 
+		// to represent the object data. 
+		var weatherForecast = {
+			// These days of the week are called properties
+			// The weather types next to them are values
+			// All of the values are called strings  ' '
+			// A string is a data type.
+			mon: 'sunny',
+			tue: 'cloudy',
+			wed: 'rainy',
+			thur: 'thunder',
+			fri: 'windy',
+			sat: 'lightning',
+			sun: 'sunny'
+		}
+
+		function setUpButtonEvents () {
+
+			var mon = document.getElementById('mon');
+			var tue = document.getElementById('tue');
+			var wed = document.getElementById('wed');
+			var thur = document.getElementById('thur');
+			var fri = document.getElementById('fri');
+			var sat = document.getElementById('sat');
+			var sun = document.getElementById('sun');
+			var tellUs = document.getElementById('tellUs');
+			var span = document.getElementById('weather');
+
+			mon.onclick = function () {
+				console.log('a');
+				span.innerText = weatherForecast.mon;
+
+				// Invoking a function with an argument
+				displayCorrectImages(weatherForecast.mon)
+
+				// Show the weather icon with jQuery.
+				$('#cloudy, #sunny, #thunder, #lightning, #rainy, #windy').css("display", "none");
+
+				// Show the weather icon with jQuery.
+				$('#' + weatherForecast.mon).css("display", "block");
+			}
+
+			tue.onclick = function () {
+				console.log('b');
+				span.innerText = weatherForecast.tue;
+				console.log(weatherForecast.tue)
+
+				// Invoking a function with an argument
+				displayCorrectImages(weatherForecast.tue)
+
+				// Show the weather icon with jQuery.
+				$('#cloudy, #sunny, #thunder, #lightning, #rainy, #windy').css("display", "none");
+
+				// Show the weather icon with jQuery.
+				$('#' + weatherForecast.tue).css("display", "block");
+			}
+
+			wed.onclick = function () {
+				span.innerText = weatherForecast.wed;
+
+				// Invoking a function with an argument
+				displayCorrectImages(weatherForecast.wed)
+
+				// Show the weather icon with jQuery.
+				$('#cloudy, #sunny, #thunder, #lightning, #rainy, #windy').css("display", "none");
+
+				// Show the weather icon with jQuery.
+				$('#' + weatherForecast.wed).css("display", "block");
+			}
+
+			thur.onclick = function () {
+				span.innerText = weatherForecast.thur;
+
+				// Invoking a function with an argument
+				displayCorrectImages(weatherForecast.thur)
+
+				// Show the weather icon with jQuery.
+				$('#cloudy, #sunny, #thunder, #lightning, #rainy, #windy').css("display", "none");
+
+				// Show the weather icon with jQuery.
+				$('#' + weatherForecast.thur).css("display", "block");
+			}
+
+			fri.onclick = function () {
+				span.innerText = weatherForecast.fri;
+
+				// Invoking a function with an argument
+				displayCorrectImages(weatherForecast.fri)
+
+				// Show the weather icon with jQuery.
+				$('#cloudy, #sunny, #thunder, #lightning, #rainy, #windy').css("display", "none");
+
+				// Show the weather icon with jQuery.
+				$('#' + weatherForecast.fri).css("display", "block");
+			}
+
+			sat.onclick = function () {
+				span.innerText = weatherForecast.sat;
+
+				// Invoking a function with an argument
+				displayCorrectImages(weatherForecast.sat)
+
+				// Show the weather icon with jQuery.
+				$('#cloudy, #sunny, #thunder, #lightning, #rainy, #windy').css("display", "none");
+				$('#' + weatherForecast.sat).css("display", "block");
+			}
+
+			sun.onclick = function () {
+				span.innerText = weatherForecast.sun;
+
+				// Invoking a function with an argument
+				displayCorrectImages(weatherForecast.sun)
+
+				// Show the weather icon with jQuery.
+				$('#cloudy').css("display", "none");
+				$('#sunny').css("display", "none");
+				$('#thunder').css("display", "none");
+				$('#lightning').css("display", "none");
+				$('#rainy').css("display", "none");
+				$('#windy').css("display", "none");
+
+				$('#' + weatherForecast.sun).css("display", "block");
+			}
+
+			tellUs.onclick = function () {
+				var askForWeather = prompt("What is the weather like today", "Cloudy....?");
+				span.innerText = askForWeather;
+
+				// Invoking a function with an argument
+				displayCorrectImages(askForWeather)
+			}
+
+		} // setUpButtonEvents ENDS
+
+		setUpButtonEvents();
+
+		// A function for doing things with the right weather reference
+		function displayCorrectImages (weatherReference) {
+			console.log(weatherReference)
+		}
+
+		// 1. Restructure
+
+		// 2. JQuery Repeated spagetti code
+
+			 // Show the weather icon with jQuery.
+			 // $('#cloudy').css("display", "none");
+			 // $('#sunny').css("display", "none");
+			 // $('#thunder').css("display", "none");
+			 // $('#lightning').css("display", "none");
+			 // $('#rainy').css("display", "none");
+			 // $('#windy').css("display", "none");
+
+			 // $('#' + weatherForecast.sun).css("display", "block");
+
+		// 3. Multi selector jQuery code 
+
+		// Show the weather icon with jQuery.
+		// $('#cloudy, #sunny, #thunder, #lightning, #rainy, #windy').css("display", "none");
+		// $('#' + weatherForecast.sat).css("display", "block");
+
+		// 4. Central function with arguments 
+
+		// 5. Days to output 
+
+		// ***Template preperation for tomorrow
+
+		// 5. CSS tidy with partners & UI Improvement
+
+		// 6. API usage  
+
+
+
+	</script>
+</body>
+</html>

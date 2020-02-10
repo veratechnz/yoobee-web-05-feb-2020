@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<style>
+		/* CSS Here */
+		.box {
+			width: 300px;
+			height: 300px;
+			border-radius: 6px;
+			display: inline-block;
+			margin: 15px;
+		}
+
+		.btn {
+			background-color: grey;
+			margin-right: 45px;
+		}
+
+		.blue {
+			background-color: blue;
+		}
+
+		.green {
+			background-color: green;
+		}
+
+		.yellow {
+			background-color: yellow;
+		}
+
+		.red {
+			background-color: red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="contain">
+		<div class="box blue"></div>
+		<div class="box green"></div>
+		<div class="box yellow"></div>
+		<div class="box red"></div>
+	</div>
+
+	<div class="contain-buttons">
+		<button class="btn" id="buttonA">Button A</button>
+		<button class="btn" id="buttonB">Button B</button>
+		<button class="btn" id="buttonC">Button C</button>
+		<button class="btn" id="buttonD">Button D</button>
+	</div>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+		// Custom js Here
+
+		// This is a doc ready function it allows you to wait till html loads 
+		// before running your javascript code
+		$(document).ready(function (){
+			// This is a console, it is used to test code and log things to the 
+			// console of the browser:
+			console.log('I am working.');
+
+			// This is an alert, it is used to launch an alert within the web page. 
+			// An alert can be used for testing
+			alert('This is an alert');
+
+		});
+	</script>
+</body>
+</html>

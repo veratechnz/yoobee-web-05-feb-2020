@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<style>
+		/* CSS Here */
+		h1 {
+			font-size: 80px;
+			text-align: center;
+		}
+
+		.sampler {
+			width: 80%;
+			margin: 0 auto;
+			border: 2px solid red;
+		}
+		.box {
+			width: 22%;
+			height: 200px;
+			border-radius: 6px;
+			display: inline-block;
+			margin: 15px;
+		}
+
+		.btn {
+			background-color: grey;
+			margin-right: 45px;
+		}
+
+		.blue {
+			background-color: grey;
+		}
+
+		.green {
+			background-color: grey;
+		}
+
+		.yellow {
+			background-color: grey;
+		}
+
+		.red {
+			background-color: grey;
+		}
+
+		.j {
+			display: inline !important;
+		}
+
+		.img-logo {
+			width: 140px;
+			position: absolute;
+			top: 1em;
+			right: 12em;
+		}
+
+	</style>
+</head>
+<body>
+	<img src="akai.png" class="img-logo" alt="">
+	<h1>Akai Sampler</h1>
+
+	<div class="sampler">
+		
+		<div class="contain">
+			<div class="box blue" id="padOne"></div>
+			<div class="box green" id="padTwo"></div>
+			<div class="box yellow" id="padThree"></div>
+			<div class="box red" id="padFour"></div>
+		</div>
+
+		<div class="contain">
+			<div class="box blue" id="padFive"></div>
+			<div class="box green" id="padSix"></div>
+			<div class="box yellow" id="padSeven"></div>
+			<div class="box red" id="padEight"></div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+		// Custom js Here
+
+		// This is a doc ready function it allows you to wait till html loads 
+		// before running your javascript code
+		$(document).ready(function (){
+
+			// console.log('a');
+			var audio = new Audio('sounds/sound-a.wav');
+			var audioB = new Audio('sounds/sound-b.wav');
+			var audioC = new Audio('sounds/sound-d.wav');
+			var audioD = new Audio('sounds/sound-e.wav');
+			var audioE = new Audio('sounds/sound-f.wav');
+			var audioF = new Audio('sounds/sound-g.wav');
+			var audioG = new Audio('sounds/sound-h.wav');
+			var audioH = new Audio('sounds/sound-i.wav');
+			// console.log('b');
+
+			$('#padOne').click(function(){
+				audioG.play();	
+
+				setTimeout(function(){
+					audio.play();	
+				}, 1000);
+
+				setTimeout(function(){
+					audioB.play();	
+				}, 1000);
+				
+			});
+
+			$('#padTwo').click(function(){
+				audioB.play();
+			});
+
+			$('#padThree').click(function(){
+				audioC.play();
+			});
+
+			$('#padFour').click(function(){
+				audioD.play();
+			});
+
+			$('#padFive').click(function(){
+				audioE.play();
+			});
+
+			$('#padSix').click(function(){
+				audioF.play();
+			});
+
+			$('#padSeven').click(function(){
+				audioG.play();
+			});
+
+			$('#padEight').click(function(){
+				audioH.play();
+			});
+
+
+		}); // Document Ready ENDS
+	</script>
+</body>
+</html>

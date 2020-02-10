@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/* 1. Add the css for the plugin */
+		.burning{
+		  color: white;         /* A light text makes a nice bright flame source */
+		  background: black;    /* A dark background gives some contrast */
+		  font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="burning">Hello World</h1>
+	<!-- 2. Connect the jQuery library to your project -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!-- 3. Connect the jQuery plugin .js file to your project -->
+	<script src="jq-burn.js"></script>
+	<script>
+	// 4. Add the custom javascript to enable/activate the plugin 
+		$(document).ready(function() {
+		    $('.burning').burn();
+		});
+	</script>
+</body>
+</html>

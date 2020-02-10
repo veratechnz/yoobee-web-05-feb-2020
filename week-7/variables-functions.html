@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<style>
+		/* CSS Here */
+		.box {
+			width: 300px;
+			height: 300px;
+			border-radius: 6px;
+			display: inline-block;
+			margin: 15px;
+		}
+
+		.btn {
+			background-color: grey;
+			margin-right: 45px;
+		}
+
+		.blue {
+			background-color: blue;
+		}
+
+		.green {
+			background-color: green;
+		}
+
+		.yellow {
+			background-color: yellow;
+		}
+
+		.red {
+			background-color: red;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="contain">
+		<div class="box blue" id="blueBox"></div>
+		<div class="box green" id="greenBox"></div>
+	</div>
+
+	<div class="contain-buttons">
+		<button class="btn button-a" id="buttonA">Button A</button>
+		<button class="btn button-b" id="buttonB">Button B</button>
+	</div>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+
+		/* This line of code is a variable. It could also be called a statement
+		because it represents one line of code */
+		var saySomething = 'Hello World!';
+		var sayAnotherThing = 'How Are You?';
+
+		// Here we set up a function that makes the browser alert and 
+		// say something. 
+		function makeTheBrowserAlert () {
+			alert(saySomething);
+
+			sayCompleteSentence();
+		}
+
+		// A function will do nothing until it is called. The code below is known as 'calling the function' or 'invoking the function'. Think of it as pushing a button to make the 
+		// function work, pulling the trigger or lighting the fuse. No call/invokation = no action = nothing will happen. 
+		makeTheBrowserAlert();
+
+		// This next function will alert a combination of 
+		// of words. 
+		function sayCompleteSentence () {
+			// Below we use the alert with a combination of variables
+			// and strings. This is known as concatenation. 
+			alert(saySomething + ' ' + sayAnotherThing)
+		}
+
+
+	</script>
+</body>
+</html>

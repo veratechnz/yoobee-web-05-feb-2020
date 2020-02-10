@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jas functions and objects</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<style>
+		/* CSS Here */
+		body {
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="pageHeading">Good Afternoon NZ</h1>
+	<p id="statement">The weather today is <span id="weather">sunny</span>.</p>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+		// Custom js Here
+
+		// A weather information/data object
+		// Here we use a variable name weatherForecast 
+		// to represent the object data. 
+		var weatherForecast = {
+			// These days of the week are called properties
+			// The weather types next to them are values
+			// All of the values are called strings  ' '
+			// A string is a data type.
+			mon: 'sunny',
+			tue: 'cloudy',
+			wed: 'rainy',
+			thur: 'thunder',
+			fri: 'windy',
+			sat: 'fine',
+			sun: ' some showers with fine patches'
+		}
+
+		// 1. This is a function which grabs html elements
+		function grabElements () {
+			// These are variables which grab the elements from the DOM
+			// and stores them in memory
+			var heading = document.getElementById('pageHeading');
+			var paragraph = document.getElementById('statement');
+			var span = document.getElementById('weather');
+
+			// Here we are using the span variable and accessing the 
+			// innerText property of the html element. 
+			// We then use the weatherForecast object to update 
+			// the innerText property. The final update is the 
+			// thur/Thursday property with a string value of 'thunder'.
+			// This means the DOM or html will now have the word thunder in
+			// it
+			span.innerText = weatherForecast.thur;
+		}
+
+		//2. Here we invoke / call the function
+		grabElements();
+
+		// Basic plan
+		// 1 Weather items array and items
+		// 2 Button click behaviour
+		// 3 Multiple buttons producing different behavior
+		// 4 Single button with input behaviour
+		// 5 Add associated image/s
+	</script>
+</body>
+</html>

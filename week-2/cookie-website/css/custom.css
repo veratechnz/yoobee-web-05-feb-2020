@@ -1,0 +1,186 @@
+/* All external css*/
+
+
+/*All CSS HTML Elements at the top*/
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-image: url('../images/selection.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: repeat-x;
+	font-family: 'Montserrat', sans-serif; 
+}
+
+ul {
+	list-style: none;
+	padding: 0px;
+}
+
+li {
+	font-size: 22px;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 3px;
+}
+
+img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+/* FORMS CSS */
+h1 {
+	color: white;
+	font-size: 30px;
+}
+
+form {
+	color: #fff;
+	padding: 1.02em;
+	width: 70%;
+	margin: 0 auto;
+}
+
+input {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+label {
+	margin-bottom: 10px;
+}
+
+input {
+	padding: 0.6em;
+	margin-top: 1em;
+}
+
+/* This hover effect applies a box shadow effect to the recipe div */
+/* You can find the way to make this effect at this web site: https://www.cssmatic.com/box-shadow */
+
+div:hover {
+	-webkit-box-shadow: 6px 3px 18px 0px rgba(255,255,255,1);
+	-moz-box-shadow: 6px 3px 18px 0px rgba(255,255,255,1);
+	box-shadow: 6px 3px 18px 0px rgba(255,255,255,1);
+	cursor: pointer; 
+}	
+ /* All Css classes together further down the page */
+.choc-chip {
+	margin-top: 10px;
+	width: 30%;
+	float: left;
+	margin: 5%;
+	margin-top: 1.5%;
+	margin-left: 8%;
+	margin-bottom: 2%;
+}
+
+.afghan {
+	margin-top: 10px;
+	width: 30%;
+	float: left;
+	margin: 5%;
+	margin-top: 1.5%;
+	margin-bottom: 2%; 
+}
+
+.brownie {
+	margin-top: 10px;
+	width: 30%;
+	float: right;
+	margin-right: 38%;
+}
+
+/* New Navigation CSS Starts here */
+.navigation {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #000;
+	opacity: 0.88;
+	width: 78%;
+	margin: 0 auto;
+	margin-bottom: 2.5em;
+}
+
+.navigation li {
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	float: left;
+	cursor: pointer;
+}
+
+.navigation a {
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	display: block;
+}
+
+li:hover {
+	background-color: grey;
+}
+
+.navigation .active {
+	color: yellow;
+}
+
+
+
+/* Contact Page CSS */
+
+.contact-page-body h1 {
+	font-weight: 300;
+	text-transform: uppercase;
+	margin-top: 1em;
+}
+
+.form-holder {
+	padding: 10px;
+	margin: 80px;
+	width: 65%;
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.form-holder h1 {
+	margin-top: 10px;
+}
+
+/* Custom Link For Contact Page Social Links */
+.email-link a,
+.phone-link a,
+.instagram-link a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.social-links div {
+	display: inline-block;
+	width: 30%; 
+	text-align: center;
+}
+
+.social-links {
+	border: 1px solid #fff;
+	width: 80%;
+	margin: 0 auto;
+	padding: 1.2em;
+}
+
+.fa-envelope {
+	padding-right: 0.2em;
+}
+
+
+

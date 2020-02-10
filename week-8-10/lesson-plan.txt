@@ -1,0 +1,19 @@
+Lesson Plan:
+- JS Demo
+- Code Teams
+- Portfolio Research
+	- What should a portfolio web site contain 
+	- Review Blog
+	- Find 3 You Like
+	- Show Partner
+	- Basic Lofi of possible portfolio
+
+- Wordpress Submission Demo - 3 files
+
+Further Out
+- Voice Recognition
+- Beautiful Web
+- Weather API
+
+
+Bank // Gabe

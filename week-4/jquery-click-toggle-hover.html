@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<style>
+		/* CSS Here */
+		.box {
+			width: 300px;
+			height: 300px;
+			border-radius: 6px;
+			display: inline-block;
+			margin: 15px;
+		}
+
+		.btn {
+			background-color: grey;
+			margin-right: 45px;
+		}
+
+		.blue {
+			background-color: blue;
+		}
+
+		.green {
+			background-color: green;
+		}
+
+		.yellow {
+			background-color: yellow;
+		}
+
+		.red {
+			background-color: red;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="contain">
+		<div class="box blue" id="blueBox"></div>
+		<div class="box green" id="greenBox"></div>
+	</div>
+
+	<div class="contain-buttons">
+		<button class="btn button-a" id="buttonA">Button A</button>
+		<button class="btn button-b" id="buttonB">Button B</button>
+	</div>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+		// Custom js Here
+
+		// Using jQuery to change the color of a div with the 'click' and 'css method'.
+		$(document).ready(function (){
+			$('#buttonA').click(function () {
+				$('.blue').css( "background-color", "red" );
+			});
+		});
+
+
+		// Add a click event function with vanilla js to change the color of the green div
+
+		// Get the button and div with normal vanilla js
+		var getButton = document.getElementById('buttonB');
+		var getDiv = document.getElementById('greenBox');
+
+		// Apply a click event to the button with vanilla js
+		getButton.addEventListener('click', function(){
+			// Drill down throught the dom object properties and change 
+			// the color of the div
+			getDiv.style.backgroundColor = 'yellow';
+		}, false);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Footer | Layout Media Queries</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700&display=swap" rel="stylesheet">
+	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="custom.css">
+</head>
+<body>
+	<div class="container">
+
+		<!-- DESKTOP NAVIGATION STARTS HERE -->
+		<ul class="navigation">
+			<li><a href="index.html" class="active">Home</a></li>
+			<li><a href="afghan-cookies.html">Afghan</a></li>
+			<li><a href="brownie-cookies.html">Brownies</a></li>
+			<li><a href="choc-chip-cookies.html">Chocolate Chip</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		<!-- DESKTOP NAVIGATION ENDS HERE -->
+
+		<!-- MOBILE NAVIGATION STARTS - Hidden & Shown With css and media queries see lines 200 - 245
+			and line 108 in custom.css-->
+			<!-- Top Navigation Menu -->
+			<div class="mobile-navigation">
+			  <a href="#home" class="active">Mobile Navigation</a>
+			  <!-- Navigation links (hidden by default) -->
+			  <div id="myLinks">
+			    <a href="#news">News</a>
+			    <a href="#contact">Contact</a>
+			    <a href="#about">About</a>
+			  </div>
+			  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+			  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			    <i class="fa fa-bars"></i>
+			  </a>
+			</div>
+		<!-- MOBILE NAVIGATION ENDS -->
+
+
+		<!-- NAVIGATION ENDS HERE -->
+
+		<h1>Footer - Layout Demo</h1>
+
+		<!-- Layout Divs START -->
+
+		<!-- This is a 3 column layout with floats - see css -->
+		<div class="parent">
+			<div class="column"></div>
+			<div class="column"></div>
+			<div class="column"></div>
+		</div>
+
+		<!-- This is a 2 column layout with floats - see css -->
+		<div class="parent">
+			<div class="column-b"></div>
+			<div class="column-b"></div>
+		</div>
+		<!-- Layout Divs END -->
+
+	</div> <!-- container ends -->
+
+	<!-- Footer starts here -->
+	<!-- This is a fixed footer see css .footer class -->
+	<div class="footer">
+		<p>Footer</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tempore fuga inventore aperiam, iure tenetur quia! Repudiandae ducimus nihil laudantium eligendi optio ab nisi doloremque, illum quae, sit quis vel?</p>
+	</div>
+
+	<script>
+		// This js is for the mobile menu which is shown and hidden by media queries
+		/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+		function myFunction() {
+		  var x = document.getElementById("myLinks");
+		  if (x.style.display === "block") {
+		    x.style.display = "none";
+		  } else {
+		    x.style.display = "block";
+		  }
+		}
+	</script>
+</body>
+</html>
